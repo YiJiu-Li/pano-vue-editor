@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Krpano全景编辑器</title>
+    <!-- 全局样式 -->
+    <style>
+        :root {
+            --primary-color: #409EFF;
+            --success-color: #67C23A;
+            --warning-color: #E6A23C;
+            --danger-color: #F56C6C;
+            --info-color: #909399;
+            --text-color: #303133;
+            --border-color: #DCDFE6;
+            --bg-color: #F5F7FA;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            color: var(--text-color);
+            font-size: 14px;
+            line-height: 1.5;
+            background-color: var(--bg-color);
+            overflow-x: hidden;
+        }
+
+        #app {
+            height: 100vh;
+        }
+    </style>
+    
+    <!-- 正确加载krpano脚本，使用公共CDN或本地路径 -->
+    <script src="https://cdn.jsdelivr.net/npm/krpano/viewer/krpano.js"></script>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

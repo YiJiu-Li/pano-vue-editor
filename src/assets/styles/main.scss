@@ -1,0 +1,206 @@
+/* 全局样式 */
+
+// Element Plus 自定义样式覆盖
+.el-container {
+    height: 100%;
+}
+
+// 侧边栏样式优化
+.app-sidebar {
+    transition: width 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    .logo-container {
+        padding: 16px;
+        margin-bottom: 8px;
+
+        .logo {
+            font-size: 20px;
+            font-weight: 600;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    .el-menu {
+        border-right: none;
+
+        .el-menu-item {
+            height: 50px;
+            line-height: 50px;
+            margin: 4px 12px;
+            border-radius: var(--radius);
+
+            &.is-active {
+                background-color: var(--primary-color);
+                color: white;
+
+                &:hover {
+                    background-color: var(--primary-dark);
+                }
+            }
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.04);
+            }
+
+            .el-icon {
+                margin-right: 12px;
+            }
+        }
+    }
+}
+
+// 主内容区域样式
+.app-main {
+    padding: 24px;
+    overflow-y: auto;
+    background-color: var(--bg-light);
+}
+
+// 卡片样式
+.el-card {
+    border-radius: var(--radius);
+    border: none;
+    transition: var(--transition);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+
+    &:hover {
+        box-shadow: var(--shadow);
+    }
+
+    .el-card__header {
+        padding: 16px 20px;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .el-card__body {
+        padding: 20px;
+    }
+}
+
+// 按钮样式
+.el-button {
+    border-radius: var(--radius);
+    font-weight: 500;
+    transition: var(--transition);
+
+    &.el-button--primary {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+
+        &:hover,
+        &:focus {
+            background-color: var(--primary-dark);
+            border-color: var(--primary-dark);
+        }
+    }
+
+    &.el-button--success {
+        background-color: var(--success-color);
+        border-color: var(--success-color);
+    }
+
+    &.el-button--danger {
+        background-color: var(--danger-color);
+        border-color: var(--danger-color);
+    }
+
+    &.is-circle {
+        border-radius: 50%;
+    }
+}
+
+// 输入框样式
+.el-input {
+    .el-input__wrapper {
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-sm);
+        transition: var(--transition);
+
+        &.is-focus {
+            box-shadow: 0 0 0 2px rgba(var(--primary-color-rgb), 0.2);
+        }
+    }
+}
+
+// 标签样式
+.el-tag {
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+// 表格样式
+.el-table {
+    border-radius: var(--radius);
+    overflow: hidden;
+
+    th.el-table__cell {
+        background-color: #f8fafc;
+        font-weight: 600;
+    }
+
+    .el-table__row {
+        transition: var(--transition);
+
+        &:hover>td {
+            background-color: #f1f5f9 !important;
+        }
+    }
+}
+
+// 选项卡样式
+.el-tabs__nav-wrap::after {
+    height: 1px;
+    background-color: var(--border-color);
+}
+
+.el-tabs__item {
+    font-weight: 500;
+
+    &.is-active {
+        color: var(--primary-color);
+    }
+
+    &:hover {
+        color: var(--primary-dark);
+    }
+}
+
+// 通用工具类
+.page-container {
+    background-color: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    padding: 24px;
+    height: 100%;
+}
+
+.action-bar {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content-header {
+    margin-bottom: 24px;
+
+    h1,
+    h2 {
+        margin: 0;
+        font-weight: 600;
+    }
+}
+
+// 动画
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}

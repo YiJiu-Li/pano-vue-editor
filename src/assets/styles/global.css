@@ -1,0 +1,142 @@
+/* 全局样式 */
+
+/* 表格样式 */
+.el-table {
+  --el-table-border-color: #ebeef5;
+  --el-table-header-bg-color: #f5f7fa;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.el-table th {
+  font-weight: 500;
+  color: #606266;
+}
+
+.el-table .cell {
+  padding: 0 12px;
+}
+
+/* 美化按钮样式 */
+.el-button {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  border-radius: 4px;
+  transition: all 0.25s ease;
+}
+
+.el-button--primary:not(.is-plain) {
+  background-color: #2468f2;
+  border-color: #2468f2;
+}
+
+.el-button--primary:not(.is-plain):hover,
+.el-button--primary:not(.is-plain):focus {
+  background-color: #1e54c5;
+  border-color: #1e54c5;
+}
+
+.el-button--primary.is-plain {
+  color: #2468f2;
+  border-color: #d6e3ff;
+  background-color: #ecf3ff;
+}
+
+.el-button--primary.is-plain:hover,
+.el-button--primary.is-plain:focus {
+  background-color: #2468f2;
+  border-color: #2468f2;
+  color: white;
+}
+
+.el-button--danger:not(.is-plain) {
+  background-color: #f44336;
+  border-color: #f44336;
+}
+
+.el-button--danger:not(.is-plain):hover,
+.el-button--danger:not(.is-plain):focus {
+  background-color: #d32f2f;
+  border-color: #d32f2f;
+}
+
+.el-button--danger.is-plain {
+  color: #f44336;
+  border-color: #fdd9d7;
+  background-color: #feefee;
+}
+
+.el-button--danger.is-plain:hover,
+.el-button--danger.is-plain:focus {
+  background-color: #f44336;
+  border-color: #f44336;
+  color: white;
+}
+
+/* 表格操作按钮样式 */
+.table-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.table-actions .el-button--small {
+  padding: 8px 16px;
+  font-size: 13px;
+  height: 32px;
+  line-height: 1;
+}
+
+.table-actions .el-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 美化对话框 */
+.el-dialog {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.el-dialog__header {
+  margin: 0;
+  padding: 16px 20px;
+  background-color: #f5f7fa;
+  border-bottom: 1px solid #ebeef5;
+}
+
+.el-dialog__title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #303133;
+}
+
+.el-dialog__body {
+  padding: 24px;
+}
+
+.el-dialog__footer {
+  padding: 12px 20px;
+  border-top: 1px solid #ebeef5;
+}
+
+/* 美化输入框 */
+.el-input__wrapper {
+  box-shadow: 0 0 0 1px #dcdfe6 inset;
+  transition: all 0.2s;
+}
+
+.el-input__wrapper:hover {
+  box-shadow: 0 0 0 1px #c0c4cc inset;
+}
+
+.el-input__wrapper.is-focus {
+  box-shadow: 0 0 0 1px #2468f2 inset;
+}
+
+/* 页面容器 */
+.page-container {
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+}
