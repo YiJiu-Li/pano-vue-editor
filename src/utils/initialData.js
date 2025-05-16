@@ -11,7 +11,7 @@ export function initializeData() {
     // 检查是否已有数据
     const existingWorks = LocalStorage.get(WORKS_KEY);
     const existingMaterials = LocalStorage.get(MATERIALS_KEY);
-    
+
     if (!existingWorks || existingWorks.length === 0) {
         console.log('初始化作品数据...');
         const demoWorks = [
@@ -32,10 +32,10 @@ export function initializeData() {
                 updateTime: new Date().toISOString()
             })
         ];
-        
+
         LocalStorage.save(WORKS_KEY, demoWorks);
     }
-    
+
     if (!existingMaterials || existingMaterials.length === 0) {
         console.log('初始化素材数据...');
         const demoMaterials = [
@@ -48,7 +48,7 @@ export function initializeData() {
                 createTime: new Date().toISOString()
             })
         ];
-        
+
         LocalStorage.save(MATERIALS_KEY, demoMaterials);
     }
 }

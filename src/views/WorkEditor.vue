@@ -124,9 +124,9 @@ onMounted(() => {
     loadPanoramaMaterials();
 });
 
-function loadWork() {
+async function loadWork() {
     const id = route.params.id;
-    const loadedWork = workService.getWorkById(id);
+    const loadedWork = await workService.getWorkById(id);
     if (loadedWork) {
         work.value = loadedWork;
     } else {
@@ -135,8 +135,8 @@ function loadWork() {
     }
 }
 
-function loadPanoramaMaterials() {
-    panoramaMaterials.value = materialService.getMaterialsByType('panorama');
+async function loadPanoramaMaterials() {
+    panoramaMaterials.value = await materialService.getMaterialsByType('panorama');
 }
 
 function goBack() {

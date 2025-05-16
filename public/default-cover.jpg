@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="120px" viewBox="0 0 200 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Default Cover</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="default-cover">
+            <rect id="background" fill="#F0F2F5" x="0" y="0" width="200" height="120"></rect>
+            <path d="M100,24 C118.225,24 133,38.775 133,57 C133,75.225 118.225,90 100,90 C81.775,90 67,75.225 67,57 C67,38.775 81.775,24 100,24 Z M100,30 C85.088,30 73,42.088 73,57 C73,71.912 85.088,84 100,84 C114.912,84 127,71.912 127,57 C127,42.088 114.912,30 100,30 Z" id="circle" fill="#C0C4CC" fill-rule="nonzero"></path>
+            <rect id="Rectangle" fill="#909399" x="85" y="46" width="30" height="22" rx="3"></rect>
+            <rect id="Rectangle" fill="#DCDFE6" x="65" y="100" width="70" height="6" rx="3"></rect>
+            <rect id="Rectangle" fill="#DCDFE6" x="80" y="110" width="40" height="6" rx="3"></rect>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Empty Work</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="empty-work" fill-rule="nonzero">
+            <circle id="background" fill="#F5F7FA" cx="100" cy="100" r="100"></circle>
+            <path d="M100,30 C130.928,30 156,55.072 156,86 C156,116.928 130.928,142 100,142 C69.072,142 44,116.928 44,86 C44,55.072 69.072,30 100,30 Z M100,40 C74.596,40 54,60.596 54,86 C54,111.404 74.596,132 100,132 C125.404,132 146,111.404 146,86 C146,60.596 125.404,40 100,40 Z" id="circle" fill="#E6A23C"></path>
+            <path d="M85,75 L115,75 C118.314,75 121,77.686 121,81 L121,105 C121,108.314 118.314,111 115,111 L85,111 C81.686,111 79,108.314 79,105 L79,81 C79,77.686 81.686,75 85,75 Z M85,81 L85,105 L115,105 L115,81 L85,81 Z" id="document" fill="#409EFF"></path>
+            <rect id="line-1" fill="#C0C4CC" x="65" y="150" width="70" height="6" rx="3"></rect>
+            <rect id="line-2" fill="#C0C4CC" x="85" y="162" width="30" height="6" rx="3"></rect>
+        </g>
+    </g>
+</svg>

@@ -183,6 +183,15 @@ const pageTitle = computed(() => {
     }
 }
 
+.app-main {
+    background-color: var(--background-color);
+    padding: 0;
+    overflow: hidden;
+    /* 防止内容溢出 */
+    display: flex;
+    flex-direction: column;
+}
+
 .app-footer {
     display: flex;
     justify-content: space-between;

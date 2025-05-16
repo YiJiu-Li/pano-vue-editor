@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Empty Scene</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="empty-scene" fill-rule="nonzero">
+            <circle id="background" fill="#F5F7FA" cx="100" cy="100" r="100"></circle>
+            <path d="M160,83.7426407 L100,50 L40,83.7426407 L40,151.227922 L100,185 L160,151.227922 L160,83.7426407 Z M100,62 L146,86.5 L100,111 L54,86.5 L100,62 Z M52,94.5 L98,119 L98,168 L52,143.5 L52,94.5 Z M148,143.5 L102,168 L102,119 L148,94.5 L148,143.5 Z" id="cube" fill="#409EFF"></path>
+            <path d="M76,86 C76,74.954305 84.954305,66 96,66 C107.045695,66 116,74.954305 116,86 C116,97.045695 107.045695,106 96,106 C84.954305,106 76,97.045695 76,86 Z" id="circle" fill="#F56C6C"></path>
+            <rect id="line-1" fill="#C0C4CC" x="65" y="150" width="70" height="6" rx="3"></rect>
+            <rect id="line-2" fill="#C0C4CC" x="85" y="162" width="30" height="6" rx="3"></rect>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Default Thumbnail</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="default-thumbnail">
+            <rect id="background" fill="#F0F2F5" x="0" y="0" width="200" height="200"></rect>
+            <path d="M100,48 C129.823,48 154,72.177 154,102 C154,131.823 129.823,156 100,156 C70.177,156 46,131.823 46,102 C46,72.177 70.177,48 100,48 Z M100,58 C75.6995,58 56,77.6995 56,102 C56,126.3005 75.6995,146 100,146 C124.3005,146 144,126.3005 144,102 C144,77.6995 124.3005,58 100,58 Z" id="circle" fill="#C0C4CC" fill-rule="nonzero"></path>
+            <path d="M95,76 L105,76 C107.761,76 110,78.239 110,81 L110,123 C110,125.761 107.761,128 105,128 L95,128 C92.239,128 90,125.761 90,123 L90,81 C90,78.239 92.239,76 95,76 Z" id="i-bar" fill="#909399"></path>
+        </g>
+    </g>
+</svg>

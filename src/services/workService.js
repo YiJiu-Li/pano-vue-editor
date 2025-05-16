@@ -68,26 +68,34 @@ export default {
             console.error('上传封面失败:', error);
             return null;
         }
-    },
-
-    /**
+    },    /**
      * 删除作品
      */
     async deleteWork(id) {
-        const works = await this.getAllWorks();
-        const workToDelete = works.find(w => w.id === id);
+        try {
+            const works = await this.getAllWorks();
+            const workToDelete = works.find(w => w.id === id);
 
-        if (workToDelete) {
+            if (!workToDelete) {
+                console.warn(`未找到要删除的作品: ${id}`);
+                return false;
+            }
+
             // 删除封面图片
             if (workToDelete.coverImage && !workToDelete.coverImage.includes('default')) {
-                await fileSystem.deleteFile(workToDelete.coverImage);
+                const deleteResult = await fileSystem.deleteFile(workToDelete.coverImage);
+                if (!deleteResult) {
+                    console.warn(`删除作品封面失败: ${workToDelete.coverImage}`);
+                }
             }
 
             // 更新数据库
             const newWorks = works.filter(work => work.id !== id);
+            console.log(`删除作品 ${id}，剩余作品数量: ${newWorks.length}`);
             return await fileSystem.saveJsonFile(WORKS_FILE, newWorks);
+        } catch (error) {
+            console.error(`删除作品失败: ${id}`, error);
+            return false;
         }
-
-        return false;
     }
 };

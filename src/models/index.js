@@ -73,13 +73,32 @@ export class Material {
         type = 'panorama', // panorama, hotspot, sound
         path = '',
         thumbnail = '',
-        createTime = new Date().toISOString()
+        createTime = new Date().toISOString(),
+        folderId = 'root' // 所属文件夹的ID，默认为root根目录
     } = {}) {
         this.id = id;
         this.name = name;
         this.type = type;
         this.path = path; // 本地文件路径
         this.thumbnail = thumbnail; // 缩略图路径
+        this.createTime = createTime;
+        this.folderId = folderId; // 所属文件夹ID
+    }
+}
+
+/**
+ * 文件夹模型
+ */
+export class Folder {
+    constructor({
+        id = Date.now().toString(),
+        name = '',
+        parentId = 'root', // 父文件夹ID，默认为root根目录
+        createTime = new Date().toISOString()
+    } = {}) {
+        this.id = id;
+        this.name = name;
+        this.parentId = parentId;
         this.createTime = createTime;
     }
 }

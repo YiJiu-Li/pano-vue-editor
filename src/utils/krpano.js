@@ -1,8 +1,7 @@
 /**
  * krpano 工具类
  */
-export default {
-    /**
+export default {    /**
      * 嵌入 krpano 查看器
      * @param {string} containerId 容器ID
      * @param {string} xmlPath XML路径
@@ -12,7 +11,7 @@ export default {
         try {
             if (typeof window.embedpano === 'undefined') {
                 console.error('krpano embedpano 未定义，请确保已加载 krpano.js');
-                
+
                 // 添加错误处理，显示友好的错误信息
                 const container = document.getElementById(containerId);
                 if (container) {
@@ -25,7 +24,14 @@ export default {
                 }
                 return null;
             }
-            
+
+            // 处理onready回调
+            function handleReady(krpanoObject) {
+                if (typeof onReady === 'function') {
+                    onReady(krpanoObject);
+                }
+            }
+
             // krpano 嵌入配置
             const embedConfig = {
                 target: containerId,
@@ -33,26 +39,45 @@ export default {
                 mobilescale: 1.0,
                 passQueryParameters: true,
                 xml: xmlPath,
-                onready: onReady
+                onready: handleReady
             };
-            
+
             return window.embedpano(embedConfig);
         } catch (error) {
             console.error('嵌入全景图时发生错误:', error);
             return null;
         }
-    },
-
-    /**
+    },    /**
      * 生成场景 XML
      * @param {Object} scene 场景数据
      * @param {Array} scenes 所有场景
      */
     generateSceneXml(scene, scenes = []) {
         // 简单实现，实际项目中应该有更复杂的XML生成逻辑
-        let xml = `<krpano>
+        let xml = `<krpano version="1.19" title="${scene.name}" onstart="startup();">
+      
+      <!-- 配置设置 -->
+      <include url="%SWFPATH%/skin/vtourskin.xml" />
+      
+      <!-- 自定义控制功能 -->
+      <action name="startup">
+        set(control.mousetype, moveto);
+        loadscene(${scene.id}, null, MERGE);
+      </action>
+      
+      <!-- 自动旋转设置 -->
+      <autorotate 
+        enabled="false"
+        waittime="3.0"
+        accel="1.0"
+        speed="3.0"
+        horizon="0.0"
+      />
+      
+      <!-- 场景定义 -->
       <scene name="${scene.id}" title="${scene.name}">
-        <view hlookat="${scene.initialView.hlookat}" vlookat="${scene.initialView.vlookat}" fov="${scene.initialView.fov}" />
+        <view hlookat="${scene.initialView.hlookat}" vlookat="${scene.initialView.vlookat}" fov="${scene.initialView.fov}" 
+              fovmin="30" fovmax="120" limitview="range" />
         <image>
           <sphere url="${scene.panoramaImage}" />
         </image>`;
